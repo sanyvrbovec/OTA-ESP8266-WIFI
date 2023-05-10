@@ -60,11 +60,11 @@ Ako želite doprinijeti ovom projektu, slobodno otvorite "issue" ili pošaljite 
 
 # README.md (English)
 
-This program enables OTA (Over-The-Air) updates on the ESP8266 microcontroller with WiFi network support and is used together with an OLED display and a Rotary Encoder.
+This program enables OTA (Over-The-Air) updates on the ESP8266 microcontroller with WiFi network support. It is designed to work with an OLED display and a Rotary Encoder.
 
 ## Libraries
 
-The program uses the following libraries:
+The program utilizes the following libraries:
 
 - ESP8266WiFi.h
 - ESP8266mDNS.h
@@ -85,9 +85,7 @@ OLED connections:
 Encoder connections:
 
 - Pin 1 (A) of the encoder is connected to pin D7 (GPIO 13) on the ESP8266.
-- Pin 2 (B) of the encoder is connected to pin D
-
-6 (GPIO 12) on the ESP8266.
+- Pin 2 (B) of the encoder is connected to pin D6 (GPIO 12) on the ESP8266.
 - The button of the encoder is connected to pin D5 (GPIO 14) on the ESP8266.
 
 ## Setup
@@ -95,13 +93,13 @@ Encoder connections:
 In the `setup()` function of the program, the following actions are performed:
 
 1. Serial communication is initialized at a baud rate of 115200.
-2. I2C connection for the OLED display is initiated.
-3. OLED display is initialized.
+2. I2C connection for the OLED display is established.
+3. The OLED display is initialized.
 4. The initial position of the encoder is set to 0.
-5. WiFi Manager configuration is set.
+5. WiFi Manager configuration is applied.
 6. Available Wi-Fi networks are scanned.
 7. If no Wi-Fi networks are found, a message is displayed on the OLED screen.
-8. If Wi-Fi networks are found, the SSID names are displayed on the OLED screen.
+8. If Wi-Fi networks are found, their SSID names are displayed on the OLED screen.
 9. WiFi connection is established or the configuration portal is started if connection fails.
 10. OTA (Over-The-Air) update is set up.
 11. Information is displayed on the OLED screen.
