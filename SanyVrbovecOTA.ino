@@ -1,3 +1,44 @@
+/**
+ * OTA-ESP8266-WIFI by Nenad Dobrijevic - SanyVrbovec
+ * E-mail: sany.vrbovec@gmail.com
+ *
+ * This program enables OTA (Over-The-Air) updates on the ESP8266 microcontroller with WiFi network support
+ * and is used together with an OLED display and a Rotary Encoder.
+ *
+ * Libraries:
+ * - ESP8266WiFi.h
+ * - ESP8266mDNS.h
+ * - WiFiUdp.h
+ * - ArduinoOTA.h
+ * - Wire.h
+ * - Adafruit_GFX.h
+ * - Adafruit_SSD1306.h
+ * - RotaryEncoder.h
+ *
+ * Connections:
+ * OLED connections:
+ *   - RESET pin of the OLED display is connected to pin D4 (GPIO 4) on the ESP8266.
+ *   - OLED I2C address is 0x3C.
+ * Encoder connections:
+ *   - Pin 1 (A) of the encoder is connected to pin D7 (GPIO 13) on the ESP8266.
+ *   - Pin 2 (B) of the encoder is connected to pin D6 (GPIO 12) on the ESP8266.
+ *   - Button of the encoder is connected to pin D5 (GPIO 14) on the ESP8266.
+ *
+ * Setup:
+ * - In the setup() function, the program performs various initializations, including WiFi connection setup,
+ *   scanning for available Wi-Fi networks, and setting up OTA updates.
+ *
+ * Main Loop:
+ * - The loop() function handles OTA updates, checks the state of the encoder button, and updates the OLED display.
+ *
+ * Contributing:
+ * - Contributions to this project are welcome. If you would like to contribute, please open an issue or submit a pull request.
+ *
+ * License:
+ * This program is licensed under the MIT License. See the LICENSE file for more information.
+ */
+
+
 #include <ESP8266WiFi.h>
 #include <ESP8266mDNS.h>
 #include <WiFiUdp.h>
